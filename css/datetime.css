@@ -1,0 +1,19 @@
+#time-display {
+    font-size: 30pt;
+    margin-top: 50pt;
+    /* margin-bottom: 5px; */
+    /* 字体 Chalkboard SE，提供备用字体和通用字体族 */
+    font-family: "Chalkboard SE", "Chalkboard", "Comic Sans MS", cursive, sans-serif; 
+    /* 轻量效果，等同于 font-weight: 300 或 lighter */
+    font-weight: light;
+    color: #000000; /* 黑色 */
+    /* 向正下方投影，模糊 9px，偏移 9px */
+    text-shadow: 0px 9px 9px rgba(0, 0, 0, 0.4); 
+    /* * text-shadow 属性解析：
+     * 第一个值 (0px): 水平偏移 (X轴偏移)，这里设为0，表示无水平偏移。
+     * 第二个值 (9px): 垂直偏移 (Y轴偏移)，设为9px，表示向正下方偏移9像素。
+     * 第三个值 (9px): 模糊半径，设为9px，表示投影的模糊程度。
+     * 第四个值 (rgba(0, 0, 0, 0.4)): 投影颜色，这里是黑色，透明度为 0.4（40%不透明）。
+     */
+}
+

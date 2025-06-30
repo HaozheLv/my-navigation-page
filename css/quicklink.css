@@ -1,0 +1,115 @@
+/* 快速访问链接网格布局 */
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* 响应式网格，每列最小100px */
+    gap: 20px; /* 图标间距 */
+    width: 100%;
+    max-width: 800px; /* 快速访问区域最大宽度 */
+    margin: 20px auto;
+}
+
+.quick-link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95em;
+    padding: 15px 10px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.quick-link-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+.quick-link-item img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+    border-radius: 8px; /* 可以给图标加圆角 */
+}
+
+/* 添加按钮通用样式 */
+.add-button, .action-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+.add-button:hover, .action-button:hover {
+    background-color: #218838;
+}
+
+
+/* 模态框样式 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定定位 */
+    z-index: 1000; /* 确保在最上层 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* 允许滚动 */
+    background-color: rgba(0,0,0,0.5); /* 半透明黑色背景 */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* 垂直居中 */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%; /* 宽度 */
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.modal-content input {
+    width: calc(100% - 20px); /* 减去padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.modal-content button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+    transition: background-color 0.2s ease;
+}
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+#cancel-new-link-btn {
+    background-color: #6c757d; /* 取消按钮的颜色 */
+}
+#cancel-new-link-btn:hover {
+    background-color: #5a6268;
+}

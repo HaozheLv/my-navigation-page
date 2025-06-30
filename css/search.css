@@ -1,0 +1,196 @@
+/* 搜索栏样式 */
+#search-bar-section {
+    display: flex;
+    gap: 0;
+    flex-direction: row;
+}
+
+/* 搜索框 */
+#search-input {
+    /* 占据剩余空间 */
+    /* flex-grow: 1;  */
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 20px;
+    padding-right: 20px;
+    /* 圆角 */
+    /* border-radius: 10px; */
+    /* 右侧大圆角 */
+    /* border-top-right-radius: 10px; */
+    /* border-bottom-right-radius: 10px; */
+    /* 左侧小圆角 */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+/* 控制三部分的样式 */
+.search-part {
+    /* 统一高度 */
+    /* height: 50px;  */
+    border: none;
+    /* padding: 0 20px; */
+    font-size: 1.2em;
+    /* 移除焦点边框 */
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* 搜索按钮 */
+#search-button { 
+    /* 统一高度 */
+    /* height: 50px;  */
+    width: 70px;
+    
+    flex-shrink: 0;
+    background-color: #5c9aff;
+    /* color: white; */
+    cursor: pointer;
+    /* transition: background-color 0.2s ease; */
+    /* border-top-right-radius: 50px; */
+    /* border-bottom-right-radius: 50px; */
+
+    /* 右侧大圆角 */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* 左侧小圆角 */
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+}
+#search-button:hover {
+    background-color: #5c9bff78;
+}
+/* 搜索图标样式 */
+#search-button-icon {
+    /* 尺寸 */
+    height: 30px; 
+    width: 30px;    
+}
+/* #search-button-icon:hover {
+    background-color: #0056b3;
+} */
+
+
+.search-bar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 统一高度 */
+    height: 50px;
+    width: 100%;
+    /* 搜索栏最大宽度 */
+    max-width: 600px; 
+    background-color: #fff;
+    /* 圆角 */
+    border-radius: 50px; 
+    /* 确保子元素不超出圆角 */
+    overflow: hidden; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin: 0 auto;
+}
+#search-engine-switcher {
+    flex-shrink: 0; /* 不收缩 */
+    background-color: #e9ecef;
+    border-right: 1px solid #ddd;
+    cursor: pointer;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+
+
+/* 自定义下拉菜单容器 */
+.custom-select-wrapper {
+    /* 相对定位，以便下拉列表绝对定位 */
+    position: relative; 
+    flex-shrink: 0;
+    /* 确保下拉菜单浮在其他内容之上 */
+    z-index: 100; 
+}
+
+/* 下拉菜单显示区域（头部） */
+.custom-select-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 图标和文字分散对齐 */
+    width: 70px; /* 调整宽度 */
+    height: 50px; /* 与搜索栏高度一致 */
+    padding: 0 15px;
+    background-color: #a7cfb3;
+    border-radius: 10px;
+    /* 左侧大圆角 */
+    /* border-top-left-radius: 10px; */
+    /* border-bottom-left-radius: 10px; */
+    /* 右侧小圆角 */
+    /* border-top-right-radius: 10px; */
+    /* border-bottom-right-radius: 10px; */
+
+    cursor: pointer;
+    /* transition: background-color 0.2s ease; */
+    box-sizing: border-box; 
+    /* 确保 padding 包含在 width 内 */
+}
+.custom-select-display:hover {
+    background-color: #a7cfb355;
+}
+/* 菜单打开时箭头旋转 */
+.custom-select-display.open .arrow-down {
+    transform: rotate(180deg); 
+}
+.custom-select-display img {
+    width: 25px; /* 图标大小 */
+    height: 25px;
+    /* 图标与文字间距 */
+    margin-right: 7px; 
+    /* object-fit: contain; */
+}
+.custom-select-display .arrow-down {
+    font-size: 0.8em;
+    /* margin-left: 5px; */
+    /* transition: transform 0.2s ease; */
+}
+
+/* 下拉选项列表 */
+.custom-select-options {
+    /* 默认隐藏 */
+    display: none;
+    position: absolute;
+    /* 定位在头部下方 */
+    top: 100%; 
+    left: 0;
+    width: 100%; /* 与头部宽度一致 */
+    background-color: #a7cfb355;
+    /* 移除顶部边框，与头部连接 */
+    border-top: none; 
+    border-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
+    /* border-bottom-right-radius: 10px; */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    max-height: 200px; /* 限制最大高度，如果选项过多可滚动 */
+    overflow-y: auto;
+    z-index: 99; /* 确保在搜索栏内部浮动 */
+}
+.custom-select-options.show {
+    display: block; /* 显示时设置为 block */
+}
+
+/* 列表项样式 */
+.option-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+
+    /* transition: background-color 0.2s ease; */
+    font-size: 1.1em;
+}
+.option-item:hover {
+    background-color: #a7cfb3;
+}
+.option-item img {
+    width: 25px;
+    height: 25px;
+    /* margin-right: 8px; */
+    object-fit: contain;
+}
+
