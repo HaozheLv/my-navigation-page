@@ -32,12 +32,12 @@ body {
     /* 将高度设置为视口高度的100% */
     height: 100%;
     /* 隐藏任何超出 body 边界的内容，阻止滚动条出现 */
-    /* overflow: hidden; */
+    overflow: hidden;
 
     /* 默认纯色背景 */
     background-color: #eeeeee;
     /* 如果需要图片背景，取消注释并替换路径 */
-    background-image: url('assets/images/your-background-image.jpg');
+    /* background-image: url('assets/images/your-background-image.jpg'); */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -89,100 +89,3 @@ body {
 } */
 
 
-/* 响应式调整 */
-/* @media (max-width: 768px) { */
-{
-    .main-container {
-        padding: 20px;
-        gap: 20px;
-    }
-    .search-bar-wrapper {
-        flex-direction: column; /* 小屏幕下搜索栏垂直堆叠 */
-        border-radius: 10px; /* 调整圆角 */
-    }
-    .search-part {
-        width: 100%;
-        border-radius: 0 !important; /* 移除部分圆角 */
-        border-bottom: 1px solid #ddd;
-    }
-    #search-engine-switcher, #search-input, #search-button {
-        border-right: none;
-        border-left: none;
-    }
-    #search-engine-switcher {
-        border-top-left-radius: 10px !important;
-        border-top-right-radius: 10px !important;
-    }
-    #search-button {
-        border-bottom: none;
-        border-bottom-left-radius: 10px !important;
-        border-bottom-right-radius: 10px !important;
-    }
-    .quick-links-grid {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-        gap: 15px;
-    }
-    .quick-link-item img {
-        width: 40px;
-        height: 40px;
-    }
-    #kaomoji-display {
-        font-size: 2em;
-    }
-    .search-bar-wrapper {
-        /* 确保这里没有 flex-direction: column; */
-        /* border-radius: 50px; /* 保持胶囊形 */
-        max-width: 90%; /* 允许占据更宽的比例 */
-        /* 确保这里没有多余的边框样式覆盖基础样式 */
-        border: 1px solid #ddd; /* 统一的外部边框 */
-    }
-    .search-part {
-        /* 移除所有与垂直堆叠相关的边框和圆角调整 */
-        border: none !important; /* 强制移除所有边框 */
-        border-radius: 0 !important; /* 强制移除所有圆角 */
-    }
-    .custom-select-display {
-        /* 仅保留与胶囊形状相关的圆角和内部边框 */
-        border-right: 1px solid #ddd; /* 与输入框连接的边框 */
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-        border-top-right-radius: 0 !important;
-        border-bottom-right-radius: 0 !important;
-        /* 确保没有 border-top/bottom */
-    }
-    #search-input {
-        /* 确保没有 border-top/bottom */
-        border-radius: 0 !important; /* 确保中间没有圆角 */
-    }
-    #search-button-icon {
-        /* 仅保留与胶囊形状相关的圆角和内部边框 */
-        border-left: 1px solid #007bff; /* 与输入框连接的边框 */
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
-        border-top-left-radius: 0 !important;
-        border-bottom-left-radius: 0 !important;
-        /* 确保没有 border-top/bottom */
-    }
-}
-
-/* @media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    .main-container {
-        padding: 15px;
-    }
-    .section {
-        padding: 10px 0;
-    }
-    h2 {
-        font-size: 1.5em;
-    }
-    #datetime {
-        font-size: 1.8em;
-    }
-    .add-button, .action-button {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-} */

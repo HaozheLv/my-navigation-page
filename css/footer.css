@@ -11,7 +11,7 @@
     /* 固定在视口中 */
     /* position: fixed;  */
     /* 距离视口底部0px */
-    bottom: 5px;
+    /* bottom: 5px; */
     /* 距离视口左侧0px */
     /* left: 0; */
     /* 横跨整个视口宽度 */   
@@ -22,7 +22,7 @@
     z-index: 999;
     /* 可选：给底部添加阴影效果 */
     /* box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);  */
-    border: 0;
+    border: none;
 }
 
 /* 链接样式 */
