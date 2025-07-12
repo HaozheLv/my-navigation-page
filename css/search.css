@@ -22,6 +22,11 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+#search-input:focus {
+    /* border: 1.5px solid #43c6ac; */
+    box-shadow: 0 0 18px 4px #43c6ac33; /* 阴影范围更大 */
+    outline: none;
+}
 /* 控制三部分的样式 */
 .search-part {
     /* 统一高度 */
@@ -64,6 +69,7 @@
     height: 30px; 
     width: 30px;    
 }
+
 /* #search-button-icon:hover {
     background-color: #0056b3;
 } */
@@ -87,6 +93,12 @@
     border: 1px solid #ddd;
     margin: 0 auto;
 }
+.search-bar-wrapper:focus-within,
+.search-bar-wrapper:hover {
+    box-shadow: 0 4px 18px rgba(60,60,60,0.18);
+}
+
+
 #search-engine-switcher {
     flex-shrink: 0; /* 不收缩 */
     background-color: #e9ecef;
@@ -95,7 +107,9 @@
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
-
+#search-engine-switcher:hover {
+    background-color: #8bbf9e; /* 悬停时更深 */
+}
 
 
 /* 自定义下拉菜单容器 */

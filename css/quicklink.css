@@ -26,6 +26,9 @@
     width: 100%; /* 在 max-width 范围内占据全部宽度 */
     padding: 0 ; /* 网格左右内边距 */
     /* box-sizing: border-box; */
+    max-height: 150px; /* 预留两行空间，按你的按钮高度和间距调整 */
+    /* 如果每个按钮高度约100px，间距15px，两行就是 2*100 + 1*15 + 上下padding */
+    /* 可根据实际效果微调 */
 }
 
 .quick-link-button {
@@ -33,6 +36,7 @@
     display: block; /* 改为块级元素 */
     position: relative; /* 关键：使其子元素可以绝对定位 */
     padding-bottom: 100%; /* 核心：底部内边距等于宽度，保持正方形宽高比 */
+    /* padding-left: 80%; */
     
     background-color: #f8f9fa;
     border-radius: 12px; /* 圆角效果 */
@@ -116,17 +120,28 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    /* background-color: rgba(0, 0, 0, 0.4); */
     /* display: flex; 这一行不需要在这里默认设置，它会在JS中被触发 */
     align-items: center; /* 确保它能居中子元素 */
     justify-content: center; /* 确保它能居中子元素 */
+
+    background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), /* 深色遮罩，亮度变低 */
+        rgba(255,255,255,0.3); /* 毛玻璃效果 */
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(60,60,60,0.24); /* 灰色阴影 */
 }
 
 .modal-content {
-    background-color: #fefefe;
+    /* background-color: #fefefe; */
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* border-radius: 10px; */
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+    border-radius: 18px;               /* 圆角与主容器一致 */
+    box-shadow: 0 4px 32px rgba(60,60,60,0.24); /* 灰色阴影 */
+    background: rgba(255,255,255,0.85);      /* 更白一点，突出内容 */
+    
     width: 90%;
     max-width: 400px; /* 限制模态框最大宽度 */
     position: relative;
@@ -267,14 +282,14 @@
 .options-menu {
     display: none; /* 默认隐藏 */
     position: absolute;
-    top: 35px; /* 菜单出现在按钮的下方，根据按钮大小和图标位置调整 */
-    right: 5px;
+    top: 5px; /* 菜单出现在按钮的下方，根据按钮大小和图标位置调整 */
+    right: 12px; /* 菜单出现在按钮的右侧 */
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10; /* 确保菜单在最上层 */
-    min-width: 80px; /* 菜单最小宽度 */
+    min-width: 60px; /* 菜单最小宽度 */
     overflow: hidden; /* 确保圆角效果 */
 }
 
