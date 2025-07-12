@@ -269,7 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
             url = 'http://' + url;
         }
 
-        if (name && url) {
+        // if (name && url) {
+        if (url) {
             const newLink = { name, url };
 
             if (editingIndex !== -1) {
