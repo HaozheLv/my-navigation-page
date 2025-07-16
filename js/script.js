@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createLinkButton(linkData, index) {
         const linkButton = document.createElement('a');
         linkButton.href = linkData.url;
-        linkButton.target = '_blank';
+        linkButton.target = '_self';
         linkButton.classList.add('quick-link-button');
         // 添加一个数据属性来存储链接的索引，便于后续删除和编辑
         linkButton.dataset.index = index; 
