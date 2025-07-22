@@ -407,7 +407,14 @@ function initCustomSearchSelect() {
 }
 
 /* 搜索函数 */
-function search(contents) {
-    window.open(searchEngines[currentSearchEngineIndex].url + contents);
-}
+// function search(contents) {
+//     window.open(searchEngines[currentSearchEngineIndex].url + contents);
+// }
 
+function search(contents) {
+    // 构造完整的 URL
+    const urlToOpen = searchEngines[currentSearchEngineIndex].url + contents;
+
+    // 将当前窗口的 URL 设置为新的 URL，这会使页面在当前窗口加载
+    window.location.href = urlToOpen;
+}
